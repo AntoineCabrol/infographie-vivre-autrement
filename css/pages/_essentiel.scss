@@ -53,7 +53,8 @@
     }
   }
 
-  .argument {
+  .wrap .argument {
+    animation-delay: 1.5s;
     p {
       overflow: hidden;
       transition: opacity 0.2s, transform 0.2s;

@@ -9,6 +9,7 @@
   .wrap .illustration {
     display: flex;
     width: 100%;
+    padding-top: 5px;
     overflow-x: auto;
     overflow-y: hidden;
     &::before, &::after {
@@ -23,6 +24,8 @@
       &:last-child { margin-top: 10px; min-width: 200px; width: 200px; }
     }
   }
+
+  .wrap .argument { animation-delay: 1.5s; }
 
 
 }

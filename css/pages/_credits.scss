@@ -28,7 +28,15 @@ input[type="radio"]:checked + .credits {
   &__action {
     display: flex;
     margin: 20px auto 0;
-    &-replay { width: 35px; margin: auto 5px auto 0; }
+    &-replay {
+      width: 35px;
+      margin: auto 5px auto 0;
+      img {
+        transform: rotate(0);
+        transition: transform 0.2s;
+        &:hover { transform: rotate(-45deg); }
+      }
+    }
     &-pinterest { width: 40px; margin: 0 4px 0 5px; }
   }
   &__revealed {

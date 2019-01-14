@@ -62,7 +62,7 @@ body {
 input[type="radio"]:checked + .part {
   z-index: 2;
   opacity: 1;
-  overflow: visible;
+  overflow: auto;
   animation-name: apparaitre;
   animation-duration: 1s;
   .wrap {

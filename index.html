@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <!-- Personnalisation de l'aperçu quand on partage le site sur les RS -->
+    <meta property="og:title" content="Pourquoi vivre autrement ? - infographie" />
+    <meta property="og:type" content="siteweb" />
+    <meta property="og:description" content="Pourquoi vivre autrement ? Et si vous choisissiez un habitat alternatif... Antoine Cabrol" />
+    <meta property="og:url" content="http://antoinecabrol.com/realisations/infographie-vivre-autrement/" />
+    <meta property="og:image" content="img/og.png" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.min.css" />
+  <!--link rel="icon" href="img/favicon.png" /-->
+  <meta name="author" content="Antoine Cabrol"/>
+  <meta name="description" content="Et si vous choisissiez un habitat alternatif... Antoine Cabrol" />
+  <title>Pourquoi vivre autrement ? - infographie</title>
+</head>
+
+
+
+<body>
+
+  <!-- SPLASHSCREEN -->
+  <input type="radio" id="splashscreen" name="ecran" checked />
+  <header class="splashscreen">
+    <div class="wrap">
+
+      <img src="img/icones/home.svg"
+           class="splashscreen__icon"
+           width="100%"
+           alt="icone de maison" />
+
+      <h1 class="splashscreen__title">
+        <span class="splashscreen__title-part
+                     splashscreen__title-part--1">Pourquoi</span>
+        <span class="splashscreen__title-part
+                     splashscreen__title-part--2">
+          <span>vivre</span>
+          <span>autrement</span>
+        </span>
+      </h1>
+
+      <span class="splashscreen__soustitre">Et si vous choisissiez un habitat alternatif ?</span>
+
+      <label for="partager" class="btn btn--next"></label>
+
+    </div>
+  </header>
+
+
+  <!-- ARGUMENT 1
+  "C'est partager l'espace" -->
+  <input type="radio" id="partager" name="ecran" />
+  <section class="part partager">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est partager l'espace</h1>
+        <p>
+          L’accès à l’habitat est en augmentation constante. L’espace non.
+        </p>
+        <p>
+          En chiffre : <strong>+ 28,1 %</strong> d’habitants en plus par rapport à 1968, <strong>+ 75,6 %</strong> du nombre de résidences principales
+          <span class="source">Source INSEE</span>
+        </p>
+      </article>
+
+      <div class="illustration">
+        <div><b></b><b></b><b></b><b></b><b></b></div>
+        <div><b></b><b></b><b></b><b></b></div>
+        <div><b></b><b></b><b></b><b></b><b></b></div>
+      </div>
+
+    </div>
+
+    <label for="maison" class="btn btn--next"></label>
+
+  </section>
+
+
+  <!-- ARGUMENT 2
+  "C'est une vraie maison" -->
+  <input type="radio" id="maison" name="ecran" />
+  <section class="part maison">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est une vraie maison</h1>
+        <p>
+          Il existe plus de 10 alternatives à la maison et l’appartement !
+        </p>
+      </article>
+
+      <div class="illustration">
+
+        <button class="maison__type-close"></button>
+
+        <!-- Les Tiny Houses -->
+        <article class="maison__type" data-focused="false">
+          <header class="maison__type-header">
+            <img class="maison__type-photo" src="img/alternatives/tinyhouse.jpg" width="100%"/>
+            <h2 class="maison__type-nom">Tiny Houses</h2>
+          </header>
+          <section class="maison__type-description">
+            <p>
+              Généralement en bois, les tiny houses sont des modèles réduits de maison ! Mais contrairement aux idées reçues, pas de sacrifice de votre confort au programme.
+            </p>
+            <p>
+              Le mot clé : OP-TI-MI-SA-TION. L'espace est exploité à merveille !
+            </p>
+          </section>
+        </article>
+
+        <!-- Les Cabanes -->
+        <article class="maison__type" data-focused="false">
+          <header class="maison__type-header">
+            <img class="maison__type-photo" src="img/alternatives/cabane.jpg" width="100%"/>
+            <h2 class="maison__type-nom">Cabanes</h2>
+          </header>
+          <section class="maison__type-description">
+            <p>
+              Vivre dans une petite maison en rondins de bois délicieusement rétro et chaleureuse. Le tout au fond des bois, perché sur une colline, sur pilotis...
+            </p>
+            <p>
+              L'harmonie avec la nature n'attend que vous ! 🌱
+            </p>
+          </section>
+        </article>
+
+        <!-- Les Dômes -->
+        <article class="maison__type" data-focused="false">
+          <header class="maison__type-header">
+            <img class="maison__type-photo" src="img/alternatives/dome.jpg" width="100%"/>
+            <h2 class="maison__type-nom">Dôme</h2>
+          </header>
+          <section class="maison__type-description">
+            <p>
+              Habitat nomade, c’est un à deux jours de montage.
+            </p>
+            <p>
+              Pensé comme une maison bioclima-tique, une grande baie vitrée orientée au sud afin de bénéficier de la chaleur du soleil et une très bonne isolation permettent une importante économie de chauffage.
+            </p>
+          </section>
+        </article>
+
+        <!-- Les Caravanes -->
+        <article class="maison__type" data-focused="false">
+          <header class="maison__type-header">
+            <img class="maison__type-photo" src="img/alternatives/caravane.jpg" width="100%"/>
+            <h2 class="maison__type-nom">Caravanes</h2>
+          </header>
+          <section class="maison__type-description">
+            <p>
+              Emblème par excellence de la vie nomade, la caravane est l'habitat le plus mobile de cette sélection. Compromis entre maniabilité et confort.
+            </p>
+            <p>
+              Ça ne serait pas l'occasion de vous lancer dans ce fameux tour du monde ? 🗺
+            </p>
+          </section>
+        </article>
+
+        <!-- Les Yourtes -->
+        <article class="maison__type" data-focused="false">
+          <header class="maison__type-header">
+            <img class="maison__type-photo" src="img/alternatives/yourte.jpg" width="100%"/>
+            <h2 class="maison__type-nom">Yourtes</h2>
+          </header>
+          <section class="maison__type-description">
+            <p>
+              Originaire d’Asie Centrale, la yourte a tout pour plaire !
+            </p>
+            <p>
+              Avec un intérieur circulaire et cozy où tous les convives peuvent se retrouver pour partager un moment convivial autour du poêle, plongez-vous dans une ambiance dépaysante !
+            </p>
+          </section>
+        </article>
+
+      </div>
+
+    </div>
+
+    <label for="essentiel" class="btn btn--next"></label>
+
+  </section>
+
+  <!-- ARGUMENT 3
+  "C'est aller à l'essentiel" -->
+  <input type="radio" id="essentiel" name="ecran" />
+  <section class="part essentiel bloquer">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est aller à l'essentiel</h1>
+        <p> Avez-vous vraiment besoin de tout ces choses ? </p>
+        <p> C'est déjà mieux ! </p>
+      </article>
+
+      <div class="illustration">
+        <img src="img/icones/hoodie.svg" width="100%" />
+        <img src="img/icones/jacket.svg" width="100%" />
+        <img src="img/icones/sweater.svg" width="100%" />
+        <img src="img/icones/sweater2.svg" width="100%" />
+      </div>
+
+    </div>
+
+    <label for="creatif" class="btn btn--next"></label>
+
+  </section>
+
+
+  <!-- ARGUMENT 4
+  "C'est être créatif" -->
+  <input type="radio" id="creatif" name="ecran" />
+  <section class="part creatif">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est être créatif</h1>
+        <p> Vous n’aviez pas conscience du potentiel de vos marches d’escalier en tant que rangements ? </p>
+      </article>
+
+      <div class="illustration">
+        <img src="img/creatif/bibliotheque.jpg" width="100%" />
+        <img src="img/creatif/mezzanine.jpg" width="100%" />
+        <img src="img/creatif/niche.jpg" width="100%" />
+      </div>
+
+    </div>
+
+    <label for="economique" class="btn btn--next"></label>
+
+  </section>
+
+
+  <!-- ARGUMENT 5
+  "C'est économique" -->
+  <input type="radio" id="economique" name="ecran" />
+  <section class="part economique">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est économique</h1>
+        <p>Le prix des logements augmente toujours plus…</p>
+        <p>
+          <strong>32 %</strong> des jeunes ménages modestes étaient propriétaires en 1973, ils ne sont plus que <strong>16 %</strong> en 2013. <span class="source">Source INSEE</span>
+        </p>
+      </article>
+
+      <div class="illustration">
+        <img src="img/icones/rising.svg" />
+        <div class="maisons">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 58.365 58.365" style="enable-background:new 0 0 58.365 58.365;" xml:space="preserve" width="512px" height="512px">
+            <path d="M57.863,26.632l-8.681-8.061V5.365h-10v3.921L29.182,0L0.502,26.632c-0.404,0.376-0.428,1.009-0.052,1.414  c0.375,0.404,1.008,0.427,1.414,0.052l3.319-3.082v33.349h16h16h16V25.015l3.319,3.082c0.192,0.179,0.437,0.267,0.681,0.267  c0.269,0,0.536-0.107,0.732-0.319C58.291,27.641,58.267,27.008,57.863,26.632z M41.182,7.365h6v9.349l-6-5.571V7.365z   M23.182,56.365V35.302c0-0.517,0.42-0.937,0.937-0.937h10.126c0.517,0,0.937,0.42,0.937,0.937v21.063H23.182z M51.182,56.365h-14  V35.302c0-1.62-1.317-2.937-2.937-2.937H24.119c-1.62,0-2.937,1.317-2.937,2.937v21.063h-14V23.158l22-20.429l14.28,13.26  l5.72,5.311v0l2,1.857V56.365z" fill="#FFFFFF"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 58.365 58.365" style="enable-background:new 0 0 58.365 58.365;" xml:space="preserve" width="512px" height="512px">
+            <path d="M57.863,26.632l-8.681-8.061V5.365h-10v3.921L29.182,0L0.502,26.632c-0.404,0.376-0.428,1.009-0.052,1.414  c0.375,0.404,1.008,0.427,1.414,0.052l3.319-3.082v33.349h16h16h16V25.015l3.319,3.082c0.192,0.179,0.437,0.267,0.681,0.267  c0.269,0,0.536-0.107,0.732-0.319C58.291,27.641,58.267,27.008,57.863,26.632z M41.182,7.365h6v9.349l-6-5.571V7.365z   M23.182,56.365V35.302c0-0.517,0.42-0.937,0.937-0.937h10.126c0.517,0,0.937,0.42,0.937,0.937v21.063H23.182z M51.182,56.365h-14  V35.302c0-1.62-1.317-2.937-2.937-2.937H24.119c-1.62,0-2.937,1.317-2.937,2.937v21.063h-14V23.158l22-20.429l14.28,13.26  l5.72,5.311v0l2,1.857V56.365z" fill="#FFFFFF"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 58.365 58.365" style="enable-background:new 0 0 58.365 58.365;" xml:space="preserve" width="512px" height="512px">
+            <path d="M57.863,26.632l-8.681-8.061V5.365h-10v3.921L29.182,0L0.502,26.632c-0.404,0.376-0.428,1.009-0.052,1.414  c0.375,0.404,1.008,0.427,1.414,0.052l3.319-3.082v33.349h16h16h16V25.015l3.319,3.082c0.192,0.179,0.437,0.267,0.681,0.267  c0.269,0,0.536-0.107,0.732-0.319C58.291,27.641,58.267,27.008,57.863,26.632z M41.182,7.365h6v9.349l-6-5.571V7.365z   M23.182,56.365V35.302c0-0.517,0.42-0.937,0.937-0.937h10.126c0.517,0,0.937,0.42,0.937,0.937v21.063H23.182z M51.182,56.365h-14  V35.302c0-1.62-1.317-2.937-2.937-2.937H24.119c-1.62,0-2.937,1.317-2.937,2.937v21.063h-14V23.158l22-20.429l14.28,13.26  l5.72,5.311v0l2,1.857V56.365z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <label for="ecologique" class="btn btn--next"></label>
+
+  </section>
+
+
+  <!-- ARGUMENT 6
+  "C'est écologique" -->
+  <input type="radio" id="ecologique" name="ecran" />
+  <section class="part ecologique">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>C'est écologique</h1>
+        <p>Moins de matériaux, moins de surface, moins de chauffage, consommation responsabilisée...</p>
+      </article>
+
+      <div class="illustration">
+        <img src="img/ecologique/consoMaison.svg" />
+        <img src="img/ecologique/consoCaravane.svg" />
+      </div>
+
+    </div>
+
+    <label for="reposant" class="btn btn--next"></label>
+
+  </section>
+
+
+  <!-- ARGUMENT 7
+  "Et c'est reposant !" -->
+  <input type="radio" id="reposant" name="ecran" />
+  <section class="part reposant">
+    <div class="wrap">
+
+      <article class="argument">
+        <h1>Et c'est reposant !</h1>
+        <p>Eh oui ! Moins d'entretien !</p>
+      </article>
+
+      <div class="illustration">
+        <img src="img/reposant/do-it.jpg" width="100%"/>
+      </div>
+
+    </div>
+
+    <label for="credits" class="btn btn--next"></label>
+
+  </section>
+
+  <!-- Crédits -->
+  <input type="radio" id="credits" name="ecran" />
+  <footer class="part credits">
+    <div class="wrap">
+
+      <h1 class="credits__merci">
+        Merci !
+        <div class="credits__action">
+          <label for="splashscreen" class="credits__action-replay">
+            <img src="img/icones/replay.svg" width="100%" />
+          </label>
+          <a class="credits__action-pinterest"
+             data-pin-do="buttonPin"
+             href="https://www.pinterest.com/pin/create/button/?url=http://antoinecabrol.com/realisations/infographie-vivre-autrement/&media=http://antoinecabrol.com/realisations/infographie-vivre-autrement/img/pin.png&description=Pourquoi%20vivre%20autrement%20-%20Et%20si%20vous%20choisissiez%20un%20habitat%20alternatif%20|%20Antoine%20Cabrol"
+             data-pin-custom="true">
+            <img src="img/icones/pinterest.svg" width="100%" />
+          </a>
+        </div>
+      </h1>
+
+      <div class="credits__revealed">
+        <article>
+          <header>Sources</header>
+          <section>
+            <p>
+              https://www.leblogpatrimoine.com/immobilier/prix/le-logement-en-france-en-2017-statistiques-detaillees-pour-comprendre-les-evolutions-et-reussir-son-investissement.html
+            </p>
+            <p>
+              https://www.insee.fr/fr/statistiques/3621915
+            </p>
+          </section>
+        </article>
+        <article>
+          <header>Illustrations</header>
+          <section>
+            <p>
+              Icones par Smashicons (1ère maison) et Freepik (autres icones) depuis www.flaticon.com
+            </p>
+            <p>
+              Images issues de Pinterest
+            </p>
+          </section>
+        </article>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <div class="progress-parent">
+    <b class="progress"></b>
+  </div>
+
+
+  <!-- JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Script récupération -->
+  <script src="js/script.js"></script>
+  <!-- Script partage Pinterest -->
+  <script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132459504-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-132459504-1');
+  </script>
+
+
+
+</body>
+
+
+
+</html>

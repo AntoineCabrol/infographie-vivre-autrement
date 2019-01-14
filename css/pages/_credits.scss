@@ -1,0 +1,91 @@
+// main: ../global.scss
+
+/** ================================================
+               # CREDITS
+================================================ **/
+
+input[type="radio"]:checked + .credits {
+  .credits__revealed {
+    animation-name: creditsTexte;
+    animation-duration: 3s;
+  }
+}
+
+.credits {
+  text-align: center;
+  background-color: $rouge;
+  color: $blanc;
+  overflow: auto;
+  &__merci {
+  	position: absolute;
+  	top: calc(50% - 40px);
+  	left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  	width: 100%;
+  }
+  &__action {
+    display: flex;
+    margin: 20px auto 0;
+    &-replay { width: 35px; margin: auto 5px auto 0; }
+    &-pinterest { width: 40px; margin: 0 4px 0 5px; }
+  }
+  &__revealed {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    max-width: 680px;
+    margin: 90vh auto 60px;
+    text-align: left;
+    article {
+      flex: 1;
+      max-width: 280px;
+      min-width: 300px;
+      margin: 40px 0;
+      header { text-align: center; font: $font-texte; }
+      p { font: $font-texte; }
+    }
+  }
+}
+
+@keyframes creditsTexte {
+  0%,75% {
+    transform: translateY(20px);
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    height: auto;
+  }
+}
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) { }
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) {
+  .credits {
+    &__revealed {
+      margin-top: 85vh;
+      article { margin: 40px 20px; }
+    }
+  }
+}
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

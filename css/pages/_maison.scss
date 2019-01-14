@@ -1,0 +1,176 @@
+// main: ../global.scss
+
+/** ================================================
+               # MAISON
+================================================ **/
+
+.maison {
+
+  .wrap {
+    margin-top: 5vh;
+    .illustration {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      padding: 0 30px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      transition: padding 1s;
+      animation-name: apparaitreSlide;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+  }
+
+  &__type {
+    margin: auto -10px;
+    cursor: pointer;
+
+    &:nth-child(1) { margin-top: 130px; }
+    &:nth-child(2) { margin-top: 0; }
+    &:nth-child(3) { margin-top: 190px; }
+    &:nth-child(4) { margin-top: 60px; }
+    &:nth-child(5) { margin-top: 250px; }
+
+    &-header { text-align: center; }
+    &-photo {
+      width: 120px;
+      border-radius: 100%;
+    }
+    &-nom {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &-description {
+      overflow: hidden;
+      transition: opacity 0.4s
+    }
+    &-close {
+      visibility: hidden;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 12px);
+        display: block;
+        height: 2px;
+        width: 24px;
+        background: #505050;
+      }
+      &::before { transform: rotate(45deg);}
+      &::after { transform: rotate(-45deg);}
+    }
+
+    &[data-focused="false"] {
+      .maison__type-header { width: 120px; }
+      .maison__type-nom {
+        margin-top: 5px;
+        font-size: 0.8rem;
+      }
+      .maison__type-description { height: 0; opacity: 0; }
+    }
+
+    &[data-focused="true"] {
+      position: fixed;
+      top: -5vh; // margin-top wrap
+      left: 5vw;
+      width: 90vw;
+      height: 100vh;
+      margin: 0;
+      padding: 40px 0;
+      cursor: default;
+      &::before {
+        z-index: 0;
+      	content: "";
+      	position: fixed;
+        top: 0;
+        left: 0;
+      	height: 100vh;
+      	width: 100vw;
+      	background: rgba(255, 255, 255, 0.9);
+      }
+      .maison__type-photo {
+        width: 240px;
+        margin: 0 auto;
+        transition: width 0.4s;
+      }
+      .maison__type-header {
+        position: relative;
+        z-index: 1;
+      }
+      .maison__type-nom {
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+      .maison__type-description {
+        z-index: 1;
+        position: relative;
+        max-width: 480px;
+        height: auto;
+        margin: 0 auto;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+.maison.focusOn {
+
+  .wrap { z-index: 1; }
+
+  .maison__type-close { visibility: visible; z-index: 1;}
+
+  .illustration {
+    z-index: 1;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+}
+
+
+input[type="radio"]:checked + .maison {
+  .wrap {
+    .illustration { animation-play-state: running; }
+  }
+}
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) {
+
+  .maison {
+    &__type {
+      width: 120px;
+      margin: auto;
+    }
+  }
+}
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

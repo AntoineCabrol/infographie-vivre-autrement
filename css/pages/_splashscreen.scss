@@ -1,0 +1,130 @@
+// main: ../global.scss
+
+/** ================================================
+               # SPLASHSCREEN
+================================================ **/
+
+input[type="radio"]:checked + .splashscreen {
+  z-index: 1;
+  opacity: 1;
+  animation-name: splashscreen;
+  animation-duration: 4s;
+  .wrap { opacity: 1; }
+  @keyframes splashscreen {
+    0%,84% { height: 100vh; margin-bottom: 0vh; }
+    100% { height: calc(100vh - 54px); margin-bottom: 30px; }
+  }
+}
+.splashscreen {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: calc(100vh - 54px);
+  width: 100%;
+  margin-bottom: 10vh;
+  background-color: $rouge;
+  &__icon {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    animation-name: splashscreen__icon;
+    animation-duration: 4s;
+    @keyframes splashscreen__icon {
+      0%,56% { width: 185px;}
+      70% { width: 80px; }
+    }
+  }
+  &__title {
+    display: block;
+    color: $blanc;
+    &-part {
+      display: block;
+      text-align: center;
+      &--1 {
+        animation-name: splashscreen__text1;
+        animation-duration: 4s;
+        font: $font-titre;
+        @keyframes splashscreen__text1 {
+          0%,28% { font-size: 0; }
+          42%,70% { font-size: 40px; }
+          84% { font-size: $font--bigger; }
+        }
+      }
+      &--2 {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        span {
+          font: $font-titre;
+          &:nth-of-type(1) {
+            animation-name: splashscreen__text2;
+            animation-duration: 4s;
+            @keyframes splashscreen__text2 {
+              0%,42% { font-size: 0; }
+              56%,70% { font-size: 40px; }
+              84% { font-size: $font--bigger; }
+            }
+          }
+          &:nth-of-type(2) {
+            font: $font-titre;
+            margin-left: 6px;
+            animation-name: splashscreen__text3;
+            animation-duration: 4s;
+            @keyframes splashscreen__text3 {
+              0%,70% { font-size: 0; }
+              84% { font-size: $font--bigger; }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__soustitre {
+    display: block;
+    max-width: 240px;
+    margin-top: 30px;
+    color: $blanc;
+    text-align: center;
+    animation-name: splashscreen__soustitre;
+    animation-duration: 4s;
+    @keyframes splashscreen__soustitre {
+      0%,84% {opacity: 0; }
+      100% { opacity: 1; }
+    }
+  }
+  .btn {
+    animation-name: splashscreen__btn;
+    animation-duration: 4s;
+    @keyframes splashscreen__btn {
+      0%,88% {
+        opacity: 0;
+        bottom: -20px;
+      }
+      92% { opacity: 1; }
+      100% { bottom: 30px; }
+    }
+  }
+}
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) { }
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

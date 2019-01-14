@@ -1,0 +1,95 @@
+// main: ../global.scss
+
+/** ================================================
+               # ECONOMIQUE
+================================================ **/
+
+.economique {
+
+  .illustration {
+    display: flex;
+    justify-content: center;
+    img {
+      position: absolute;
+      top: 80px;
+      animation-name: croissanceFleche;
+      animation-duration: 1s;
+      animation-delay: 3s;
+      animation-fill-mode: both;
+      animation-play-state: paused;
+    }
+
+    .maisons {
+      display: flex;
+      width: 90%;
+      margin: auto auto 40px;
+      svg {
+        height: 100%;
+        margin: auto 10px 0;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+        animation-play-state: paused;
+        &:nth-of-type(1) {
+          width: 100px;
+          animation-name: croissanceMaison1;
+        }
+        &:nth-of-type(2) {
+          width: 150px;
+          animation-name: croissanceMaison2;
+        }
+        &:nth-of-type(3) {
+          width: 200px;
+          animation-name: croissanceMaison3;
+        }
+        path { fill: $rouge; }
+      }
+    }
+
+  }
+
+}
+
+
+
+input[type="radio"]:checked + .economique * {
+  animation-play-state: running;
+}
+
+@keyframes croissanceFleche {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes croissanceMaison1 {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes croissanceMaison2 {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes croissanceMaison3 {
+  0% { opacity: 0; transform: translateY(-15px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) { }
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

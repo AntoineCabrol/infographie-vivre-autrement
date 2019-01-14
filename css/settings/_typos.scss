@@ -1,0 +1,52 @@
+// main: ../global.scss
+
+/** ================================================
+               # TYPOS
+================================================ **/
+
+$fontfamily   : 'Roboto', Arial;
+
+$font--normal : 18px;
+$font--bigger : 1.7rem;
+$font--small  : 0.8rem;
+
+$font-titre   : 300 $font--bigger $fontfamily;
+$font-texte   : 300 $font--normal $fontfamily;
+$font-legende : italic 300 $font--small $fontfamily;
+
+
+* { font: $font-texte; }
+
+h1 { font: $font-titre; }
+
+.source {
+  display: block;
+  margin-top: 10px;
+  font: $font-legende;
+}
+
+p { margin: 0.6rem 0; }
+
+strong { font-weight: bold; color: $rouge; }
+
+
+
+
+
+  /** ------------------------------------------------
+                  tablette paysage
+  ------------------------------------------------ **/
+
+  @media (min-width: $tablette-paysage) { }
+
+  /** ------------------------------------------------
+                  tablette portrait
+  ------------------------------------------------ **/
+
+  @media (min-width: $tablette-portrait) { }
+
+  /** ------------------------------------------------
+                  Mobile
+  ------------------------------------------------ **/
+
+  @media (min-width: $mobile) { }

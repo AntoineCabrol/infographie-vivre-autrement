@@ -1,0 +1,68 @@
+// main: ../global.scss
+
+/** ================================================
+               # PROGRESS
+================================================ **/
+
+.part.focusOn ~ .progress-parent { opacity: 0.1; }
+
+.progress-parent {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.progress {
+  width: calc(100% - 58px);
+  height: 100%;
+  margin: auto auto 0 0;
+  background-color: $rouge;
+  animation: none;
+}
+
+#creatif:checked,
+#ecologique:checked,
+#economique:checked,
+#essentiel:checked,
+#maison:checked,
+#partager:checked,
+#reposant:checked {
+  & ~ .progress-parent .progress {
+    animation-name: progress;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+#partager:checked ~ .progress-parent   { width: calc(1 * (100% / 7) ) }
+#maison:checked ~ .progress-parent     { width: calc(2 * (100% / 7) ) }
+#essentiel:checked ~ .progress-parent  { width: calc(3 * (100% / 7) ) }
+#creatif:checked ~ .progress-parent    { width: calc(4 * (100% / 7) ) }
+#economique:checked ~ .progress-parent { width: calc(5 * (100% / 7) ) }
+#ecologique:checked ~ .progress-parent { width: calc(6 * (100% / 7) ) }
+#reposant:checked ~ .progress-parent   { width: calc(7 * (100% / 7) ) }
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) { }
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

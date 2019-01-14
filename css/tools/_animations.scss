@@ -1,0 +1,33 @@
+// main: ../global.scss
+
+/** ================================================
+               # ANIMATIONS
+================================================ **/
+
+
+@keyframes apparaitre {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
+
+@keyframes apparaitreSlide {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes disparaitre {
+  0% { opacity: 1; }
+  100% { z-index: 0; opacity: 0;}
+}
+
+@keyframes progress {
+  0%, 45% {
+  	width: calc(100% - 58px);
+  	height: 100%;
+  }
+  50% { height: 50%; }
+  100% {
+  	height: 50%;
+  	width: 100%;
+  }
+}

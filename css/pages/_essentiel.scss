@@ -1,0 +1,104 @@
+// main: ../global.scss
+
+/** ================================================
+               # ESSENTIEL
+================================================ **/
+
+.essentiel {
+  &.bloquer {
+    .wrap .illustration {
+      img:not(.choisi) {
+        opacity: 1;
+        transform: scale(1);
+        cursor: pointer;
+        pointer-events: all;
+        &:hover { transform: scale(1.05); }
+      }
+    }
+    .btn { opacity: 0.4; pointer-events: none; }
+    .argument p {
+      &:first-of-type {
+        height: auto;
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &:last-of-type {
+        height: 0;
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+  }
+
+  .wrap .illustration {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: center;
+    &::before, &::after {
+    	content: "";
+    	min-width: 70px;
+    }
+    img {
+      width: 200px;
+      padding: 20px;
+      transition: transform 0.2s, opacity 0.2s;
+      &:not(.choisi) {
+        opacity: 0.2;
+        transform: scale(0.9);
+        pointer-events: none;
+      }
+      &.choisi { transform: scale(1.2); }
+    }
+  }
+
+  .argument {
+    p {
+      overflow: hidden;
+      transition: opacity 0.2s, transform 0.2s;
+      &:first-of-type {
+        height: 0;
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      &:last-of-type {
+        height: auto;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .btn { transition: all 0.2s; }
+
+}
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) {
+
+  .essentiel {
+
+    .wrap .illustration { }
+
+  }
+
+}
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }

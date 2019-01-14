@@ -1,0 +1,204 @@
+// main: ../global.scss
+
+/** ================================================
+               # PARTAGER
+================================================ **/
+
+$bSize : 42px;
+
+
+input[type="radio"]:checked + .partager {
+  .wrap {
+    .illustration, b { animation-play-state: running; }
+  }
+}
+
+.partager {
+
+  .wrap {
+    .illustration {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      animation-name: illustrationPartager;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+
+      b {
+        width: $bSize;
+        height: $bSize;
+        margin: 2px;
+        border: 4px solid $rouge;
+        border-radius: 100%;
+        animation-duration: 4s;
+        animation-play-state: paused;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        &:nth-child(1) {
+          b:nth-child(1) { animation-name: illustrationPartager--b1; }
+          b:nth-child(2) { animation-name: illustrationPartager--b2; }
+          b:nth-child(3) { animation-name: illustrationPartager--b3; }
+          b:nth-child(4) { animation-name: illustrationPartager--b4; }
+          b:nth-child(5) { animation-name: illustrationPartager--b5; }
+        }
+        &:nth-child(2) {
+          b:nth-child(1) { animation-name: illustrationPartager--b6; }
+          b:nth-child(2) { animation-name: illustrationPartager--b7; }
+          b:nth-child(3) { animation-name: illustrationPartager--b8; }
+          b:nth-child(4) { animation-name: illustrationPartager--b9; }
+        }
+        &:nth-child(3) {
+          b:nth-child(1) { animation-name: illustrationPartager--b10; }
+          b:nth-child(2) { animation-name: illustrationPartager--b11; }
+          b:nth-child(3) { animation-name: illustrationPartager--b12; }
+          b:nth-child(4) { animation-name: illustrationPartager--b13; }
+          b:nth-child(5) { animation-name: illustrationPartager--b14; }
+        }
+      }
+
+    }
+  }
+
+}
+
+
+
+
+@keyframes illustrationPartager {
+  0%, 74% { height: 345px; }
+  100% { height: 200px; }
+}
+
+@keyframes illustrationPartager--b1 {
+  0%,50% { transform: translate(-20vw, -25vw); }
+  75% { transform: translate(-15vw, -15vw);}
+  100% { transform: translate(0, 0);}
+}
+@keyframes illustrationPartager--b2 {
+  0%,50% { transform: translate(-10vw, -25vw); }
+  75% { transform: translate(10vw, -10vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b3 {
+  0%,50% {
+    transform: translate(-7vw, -15vw) scale(0.5);
+    border-width: 8px;
+  }
+  75% {
+    transform: translate(10vw, -6vw) scale(1);
+    border-width: 4px;
+  }
+    100% { transform: translate(0, 0); }
+  }
+@keyframes illustrationPartager--b4 {
+  0%,50% { transform: translate(5vw, -10vw); }
+  75% { transform: translate(10vw, -15vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b5 {
+  0%,50% {
+    transform: translate(15vw, -15vw) scale(2);
+    border-width: 2px;
+  }
+  75% {
+    transform: translate(18vw, -18vw) scale(1);
+    border-width: 4px;
+  }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes illustrationPartager--b6 {
+  0%,50% { transform: translate(-25vw, 2vw); }
+  75% { transform: translate(-18vw, 4vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b7 {
+  0%,50% { transform: translate(-30vw, -20vw); }
+  75% { transform: translate(-20vw, -6vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b8 {
+  0%,50% {
+    transform: translate(-25vw, -10vw) scale(2.2);
+    border-width: 2px;
+  }
+  75% {
+    transform: translate(-15vw, -10vw) scale(1);
+    border-width: 4px;
+  }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b9 {
+  0%,50% {
+    transform: translate(-4vw, -6vw) scale(1.5);
+    border-width: 3px;
+  }
+  75% {
+    transform: translate(-4vw, -6vw) scale(1);
+    border-width: 4px;
+  }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes illustrationPartager--b10 {
+  0%,50% { transform: translate(-14vw, 5vw); }
+  75% { transform: translate(-6vw, 8vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b11 {
+  0%,50% {
+    transform: translate(-20vw, 20vw) scale(0.5);
+    border-width: 8px;
+  }
+  75% {
+    transform: translate(-10vw, 18vw) scale(1);
+    border-width: 4px;
+  }
+    100% { transform: translate(0, 0); }
+  }
+@keyframes illustrationPartager--b12 {
+  0%,50% {
+    transform: translate(0vw, 15vw) scale(4);
+    border-width: 1px;
+  }
+  75% {
+    transform: translate(0vw, 15vw) scale(1);
+    border-width: 4px;
+  }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b13 {
+  0%,50% { transform: translate(15vw, 30vw); }
+  75% { transform: translate(20vw, 25vw); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes illustrationPartager--b14 {
+  0%,50% { transform: translate(25vw, -10vw); }
+  75% { transform: translate(30vw, -15vw); }
+  100% { transform: translate(0, 0); }
+}
+
+
+
+
+/** ------------------------------------------------
+                tablette paysage
+------------------------------------------------ **/
+
+@media (min-width: $tablette-paysage) { }
+
+/** ------------------------------------------------
+                tablette portrait
+------------------------------------------------ **/
+
+@media (min-width: $tablette-portrait) { }
+
+/** ------------------------------------------------
+                Mobile
+------------------------------------------------ **/
+
+@media (min-width: $mobile) { }
